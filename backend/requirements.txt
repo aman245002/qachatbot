@@ -1,9 +1,9 @@
 streamlit
 sentence-transformers
-chromadb
+chromadb==0.4.14
+protobuf==3.20.3
 scikit-learn
 python-dotenv
-requests
 pdfplumber
+requests
 python-docx
-protobuf==3.20.3
