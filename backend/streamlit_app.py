@@ -1,4 +1,7 @@
 import os
+os.environ["STREAMLIT_WATCH_DIRECTORIES"] = "false"
+os.environ["ANONYMIZED_TELEMETRY"] = "False"  # Disable ChromaDB telemetry
+
 import streamlit as st
 from dotenv import load_dotenv
 from ingestion.parse_pdf import extract_text_from_pdf
@@ -14,7 +17,6 @@ import chromadb
 # ========================================
 # Setup
 # ========================================
-os.environ["STREAMLIT_WATCH_DIRECTORIES"] = "false"
 load_dotenv()
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
@@ -65,7 +67,6 @@ if uploaded_file and query:
     with st.spinner("💬 Generating answer using Groq..."):
         top_chunk_scores = query_similar_chunks(query, embed_model, collection)
         answer = generate_multistep_answer(query, top_chunk_scores)
-
 
     # Display
     st.subheader("🧠 Answer:")
