@@ -2,8 +2,10 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY . .
+# COPY only the backend folder contents into /app
+COPY backend/ /app
 
+# Now /app has requirements.txt and other files
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8501
