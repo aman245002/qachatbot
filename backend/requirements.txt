@@ -1,0 +1,9 @@
+streamlit
+sentence-transformers
+chromadb
+scikit-learn
+python-dotenv
+requests
+pdfplumber
+python-docx
+protobuf==3.20.3
