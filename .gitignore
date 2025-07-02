@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# VSCode or JetBrains
+.vscode/
+.idea/
+
+# Env
+.env
+*.env
+
+# Cache
+*.cache
+*.log
+*.DS_Store
+
+# ChromaDB Vector Store
+vector_db/
+
+# Misc
+temp_*.pdf
+*.pdf
+*.docx
+*.txt
