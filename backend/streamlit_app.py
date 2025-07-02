@@ -22,7 +22,8 @@ embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Setup vector DB
 DB_PATH = "../vector_db"
-client = chromadb.PersistentClient(path=DB_PATH)
+client = chromadb.Client()
+
 
 # ========================================
 # Streamlit UI
